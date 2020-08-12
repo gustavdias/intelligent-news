@@ -1,5 +1,6 @@
 //news API for Alan
 // const API_KEY = "7018c088a5a749da9d7fc74289e010be";
+
 intent('What does this app do?', 'What can I do here?', 
       reply('This is a news project.'));
 
@@ -110,7 +111,7 @@ const confirmation = context(() => {
     })
 })
 
-//logic for openning the articles
+//logic for opening the articles
 intent('open (the|) (article|) (number|) $(number* (.*))', (p) => {
     if(p.number.value) {
         p.play({ command:'open', number: p.number.value, articles: savedArticles})

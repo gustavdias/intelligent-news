@@ -20,7 +20,7 @@ export default makeStyles((theme) => ({
   },
   link: {
     textDecoration: 'none',
-    color: 'rgba(21, 101, 192)',
+    color: '#457B9D',
   },
   image: {
     marginLeft: 10,
@@ -32,8 +32,8 @@ export default makeStyles((theme) => ({
     width: '50%',
     padding: '3%',
     borderRadius: 10,
-    color: 'white',
-    backgroundColor: 'rgba(21, 101, 192)',
+    color: '#f1faee',
+    backgroundColor: '#1D3557',
     margin: '0 12px',
     textAlign: 'center',
     height: '25vmin',
@@ -51,6 +51,8 @@ export default makeStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-around',
+    //margin under last card
+    margin: "50px",
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
     },

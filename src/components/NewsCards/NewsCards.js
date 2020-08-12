@@ -21,15 +21,15 @@ const infoCards = [
   {
     color: "#264653",
     title: "News by Terms",
-    info: "Bitcoin, PlayStation 5, Smartphones, Donald Trump...",
-    text: "What's up with PlayStation 5",
+    info: "Bitcoin, Corona Virus, Smartphones, Elections...",
+    text: "What's up with Corona Virus",
     index: "3",
   },
   {
     color: "#1d3557",
     title: "News by Sources",
-    info: "CNN, Wired, BBC News, Time, IGN, Buzzfeed, ABC News...",
-    text: "Give me the news from CNN",
+    info: "Wired, BBC News, Time, IGN, Buzzfeed, ABC News, CNN...",
+    text: "Give me the news from BBC",
     index: "4",
   },
 ];
@@ -55,7 +55,7 @@ const NewsCards = ({ articles, activeArticle }) => {
               xs={12}
               sm={6}
               md={3}
-              lg={3}
+              // lg={3}
               className={classes.infoCard}
               key={infoCard.index}
             >
@@ -63,17 +63,20 @@ const NewsCards = ({ articles, activeArticle }) => {
                 className={classes.card}
                 style={{ backgroundColor: infoCard.color }}
               >
-                <Typography variant="h5" component="h5">
+                <Typography variant="h6" component="h6">
                   {infoCard.title}
                 </Typography>
+                <div className={classes.space}></div>
+
                 {/* if there is info, show the Typography / infoCard.title.split(' ')[2] splits the title into a array and grabs the third word */}
                 {infoCard.info ? (
-                  <Typography variant="h6" component="h6">
+                  <Typography variant="h7" component="h7">
                     <strong>{infoCard.title.split(" ")[2]}</strong>: <br />
                     {infoCard.info}
                   </Typography>
                 ) : null}
-                <Typography variant="h6" component="h6">
+                <div className={classes.space}></div>
+                <Typography variant="p" component="p">
                   Try saying: <br /> <i>{infoCard.text}</i>
                 </Typography>
               </div>

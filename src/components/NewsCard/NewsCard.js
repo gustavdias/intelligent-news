@@ -55,6 +55,7 @@ const NewsCard = ({
       <CardActionArea href={url} target="_blank">
         <CardMedia
           className={classes.media}
+          //If there is no image for the article, show this generic image: news
           image={urlToImage || "../../images/news.png"}
         />
         <div className={classes.details}>
