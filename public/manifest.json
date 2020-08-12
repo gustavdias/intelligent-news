@@ -1,0 +1,21 @@
+{
+  "short_name": "Intelligent News",
+  "name": "Intelligent News - AI providing your news",
+  "icons": [
+
+    {
+      "src": "./favicon/android-chrome-192x192.pmg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./favicon/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#181818",
+  "background_color": "#F1FAEE"
+}
