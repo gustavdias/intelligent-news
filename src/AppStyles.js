@@ -77,4 +77,11 @@ export default makeStyles((theme) => ({
       height: '35vmin',
     },
   },
+  large:{
+    width: theme.spacing(20),
+    height: theme.spacing(20),
+    margin: '3% 0',
+    padding: '0 0.01%',
+
+  }
 }));

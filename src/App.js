@@ -6,7 +6,7 @@ import { NewsCards, Modal } from "./components";
 // import NewsCards from "./components/NewsCards/NewsCards";
 // import Modal from "./components/Modal/Modal"
 
-import { Typography } from "@material-ui/core";
+import { Typography, Avatar, Grow } from "@material-ui/core";
 
 // import classes from "*.module.css";
 import useStyles from "./AppStyles";
@@ -18,7 +18,7 @@ const alanKey =
 const App = () => {
   const [activeArticle, setActiveArticle] = useState(0);
   const [newsArticles, setNewsArticles] = useState([]);
-  //!You stopped here! After, create a button/command to open instructions
+  //TODO You stopped here! After, create a button/command to open instructions
   const [isOpen, setIsOpen] = useState(false);
 
   const classes = useStyles();
@@ -56,6 +56,7 @@ const App = () => {
     });
   }, []);
   return (
+    //! 20 Articles as answer to news search result
     <div>
       <div className={classes.logoContainer}>
         {newsArticles.length ? (
@@ -72,11 +73,15 @@ const App = () => {
             </div>
           </div>
         ) : null}
-        <img
+        {/* //TODO I need to work on the logo, maybe put some effect or animation on it */}
+        <Grow in>
+<Avatar alt="Intelligent News" src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/80/48/e3/8048e37d-0d91-b1c4-b52f-9a9f2a5b2519/source/512x512bb.jpg" className={`${classes.large}  `}/>
+        {/* <img
           src="https://is5-ssl.mzstatic.com/image/thumb/Purple115/v4/80/48/e3/8048e37d-0d91-b1c4-b52f-9a9f2a5b2519/source/512x512bb.jpg"
           className={classes.alanLogo}
           alt="ai logo"
-        />
+        /> */}
+        </Grow>
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
 
